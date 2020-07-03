@@ -12,6 +12,27 @@
 	      emailjs.init("user_aPyseCTvMeWXBstCRLUSW");
 	   	})();
 		</script>
+		<style>
+			.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+		</style>
 
 	</head>
 	<body class="is-preload">
@@ -80,8 +101,9 @@
 						<!-- Media -->
 							<article id="media">
 								<h2 class="major">Media</h2>
-								<span class="image main"><iframe width="560" height="315" src="https://www.youtube.com/embed/VL99FlCM3VA" frameborder="0" 
-									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="vid1" allowfullscreen></iframe></span>
+								<span class="image main">
+									<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/VL99FlCM3VA" frameborder="0" 
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="vid1" allowfullscreen></iframe></div></span>
 								<ul class="icons">
 									<li><a href="https://www.instagram.com/kamal.ahmad.khan/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
@@ -108,7 +130,7 @@
 									<ul class="actions">
 										<!-- <li><input type="submit" value="Send Message" id="Send-Message" class="primary" /></li> -->
 										<li><input type="button" value="Send Message" id="Send-Message"/> </li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="reset" id="reset-message" value="Reset" /></li>
 									</ul>
 								</form>
 								
@@ -153,6 +175,7 @@
 					var template_id = "template_EmZm7CuX";
 					emailjs.send(service_id, template_id, template_params);
 					location.href = "#confirmation";
+					$("reset-message").click();
 				});
 				$(window).click(function () {
 					if (!window.location.pathname.includes("media")){
