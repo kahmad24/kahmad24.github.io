@@ -210,19 +210,26 @@
 					location.href = "#confirmation";
 					$("reset-message").click();
 				});
+
 				$(window).click(function () {
 					if (!window.location.pathname.includes("media")){
-						var video = $(".vid1").attr("src");
-						$(".vid1").attr("src","");
-						$(".vid1").attr("src",video);					
+						var videos = $(".vid1");
+						$.each(videos, function(n, video){
+							var vidSrc = $(video).attr("src")
+							$(video).attr("src", "");
+							$(video).attr("src", vidSrc);
+						});						
 					}
     			});
 
 				$('.close').click(function() {
 					if (!window.location.pathname.includes("media")){
-						var video = $(".vid1").attr("src");
-						$(".vid1").attr("src","");
-						$(".vid1").attr("src",video);
+						var videos = $(".vid1");
+						$.each(videos, function(n, video){
+							var vidSrc = $(video).attr("src")
+							$(video).attr("src", "");
+							$(video).attr("src", vidSrc);
+						});	
 					}
 				});
 			</script>
