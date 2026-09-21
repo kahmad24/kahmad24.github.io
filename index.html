@@ -32,6 +32,9 @@
     width: 100%;
     height: 100%;
 }
+            .booking-button { white-space: normal; height: auto; line-height: 1.6; padding: 0.85rem 1.25rem; max-width: 100%; }
+            #event-inquiry input[type="date"] { background: transparent; border: solid 1px #fff; border-radius: 4px; color: inherit; color-scheme: dark; width: 100%; min-width: 0; padding: 0 1rem; }
+            #event-inquiry input { height: 2.75rem; }
 		</style>
 
 	</head>
@@ -55,6 +58,7 @@
 						<nav>
 							<ul>
 								<li><a href="#bio">Bio</a></li>
+								<li><a href="#live-music">Live Music</a></li>
 								<li><a href="#teaching">Teaching</a></li>
 								<li><a href="#testimonals">Testimonials</a></li>
 								<li><a href="#media">Media</a></li>
@@ -86,26 +90,39 @@
 								</p>
 							</article>
 
+						<!-- Live Music -->
+							<article id="live-music">
+								<h2 class="major">Live Music</h2>
+                                <h3>Live sitar music for weddings, cocktail hours &amp; special events.</h3>
+                                <p>Bring the sound of live sitar to your wedding or special event. Kamal Ahmad provides live sitar music throughout the San Francisco Bay Area, from intimate ceremonies and cocktail hours to large weddings and celebrations.</p>
+                                <p>Performances can be tailored to the atmosphere of your event and are available as solo sitar or in collaboration with tabla and other musicians.</p>
+                                <p>Wedding Ceremonies &middot; Cocktail Hours &middot; Mehndi &amp; Sangeet &middot; Receptions &middot; Private Events &middot; Corporate Events</p>
+                                <p><a href="#event-inquiry" class="button primary booking-button">CHECK AVAILABILITY &amp; GET A QUOTE</a></p>
+							</article>
+
+                            <article id="event-inquiry">
+                                <h2 class="major">Event Inquiry</h2>
+                                <form id="event-inquiry-form">
+                                    <div class="fields">
+                                        <div class="field half"><label for="event-name">Name</label><input type="text" id="event-name" name="name" autocomplete="name" required /></div>
+                                        <div class="field half"><label for="event-email">Email</label><input type="email" id="event-email" name="email" autocomplete="email" required /></div>
+                                        <div class="field half"><label for="event-phone">Phone</label><input type="tel" id="event-phone" name="phone" autocomplete="tel" /></div>
+                                        <div class="field half"><label for="event-date">Event Date</label><input type="date" id="event-date" name="date" required /></div>
+                                        <div class="field half"><label for="event-venue">Venue/City</label><input type="text" id="event-venue" name="venue"  /></div>
+                                        <div class="field half"><label for="event-type">Event Type</label><input type="text" id="event-type" name="type" placeholder="e.g. Wedding ceremony" /></div>
+                                        <div class="field"><label for="event-performance">Performance Type</label><select id="event-performance" name="performance" required><option value="">Select a performance type</option><option>Solo Sitar</option><option>Sitar + Tabla</option><option>Not Sure</option></select></div>
+                                        <div class="field"><label for="event-time">Approximate Performance Time</label><input type="text" id="event-time" name="time" placeholder="e.g. 5–7 pm, approximately 2 hours" /></div>
+                                        <div class="field"><label for="event-message">Message</label><textarea id="event-message" name="message" rows="4"></textarea></div>
+                                    </div>
+                                    <p id="event-status" role="status" aria-live="polite"></p>
+                                    <ul class="actions"><li><button type="submit" class="primary">Send Inquiry</button></li></ul>
+                                </form>
+                            </article>
+
 						<!-- Teaching -->
 							<article id="teaching">
 								<h2 class="major">Teaching</h2>
-								
-								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								<p>Kamal is available for lessons in person, in the San Francisco bay area and online 
-									anywhere in the world. He has experience teaching students of all ages, with a range of 
-									skill levels and artistic backgrounds. Consequently, Kamal believes in gearing his lessons towards 
-									the needs of each student to help them progress towards their musical goals. At present, he is available for sitar, tabla, esraj/dilruba, harmonium and rubab lessons.
-									<br/>
-									<br/>
-									For further details, 
-									please <a href="#contact">get in touch.</a></p>
-									<div style="margin-left: 12.5%;
-											width: 100%;">
-									<div class="image fit2"><img src="images/1.jpg" alt="" /></div>
-									<div class="image fit2"><img src="images/3.jpg" alt="" /></div>
-									<div class="image fit2"><img src="images/2.jpg" alt="" /></div>
-									<div class="image fit2"><img src="images/4.jpg" alt="" /></div>
-								</div>
+								<p><a href="https://rangeenmusicschool.com/">Visit Rangeen Music School</a></p>
 							</article>
 
 						<!-- Testimonials -->
@@ -136,14 +153,11 @@
 									<li><a href="https://www.youtube.com/@KamalAhmadMusic/videos" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
 								</ul>
 								<span>
-									<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/meHnFLkQQbY" frameborder="0" 
+									<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/gEjmsPvphtY" frameborder="0"
 										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="vid1" allowfullscreen></iframe></div></span>
 								<span class="image main">
-									<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/VL99FlCM3VA" frameborder="0" 
+									<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/6nX1_kkoYPE" frameborder="0"
 									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="vid1" allowfullscreen></iframe></div></span>
-								<span>
-									<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Mf4N2RaUCwA" frameborder="0" 
-										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="vid1" allowfullscreen></iframe></div></span>
 							</article>
 
 						<!-- Contact -->
@@ -198,6 +212,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/event-inquiry.js"></script>
 			<script>
 				$('#Send-Message').click(function(){
 					
