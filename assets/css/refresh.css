@@ -60,3 +60,7 @@ h2.major { letter-spacing: -.025em; border-color: var(--gold); }
 @media (prefers-reduced-motion: reduce) {
     *, *:before, *:after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+.wedding-performance { margin: 0 0 2rem; }
+.wedding-performance video { display: block; width: 100%; max-height: 65vh; background: #120d0d; border-radius: 3px; }
+.wedding-performance figcaption { margin-top: .65rem; color: var(--gold); font-size: .9rem; }

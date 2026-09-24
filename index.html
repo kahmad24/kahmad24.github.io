@@ -111,6 +111,13 @@
                                 <p>Kamal Ahmad is an Indian classical sitar musician based in the San Francisco Bay Area. His performance work encompasses classical concerts, recitals, and musical collaborations, as well as weddings and private events.</p>
                                 <p>For concert presenters and arts organizations, inquire about classical recitals and collaborative performances. For weddings and other occasions, performances can be tailored to the atmosphere of your event. Solo sitar and performances with tabla or other musicians are available.</p>
                                 <p>Classical Concerts &middot; Recitals &middot; Arts &amp; Cultural Programs &middot; Weddings &middot; Private &amp; Corporate Events</p>
+                                <figure class="wedding-performance">
+                                    <video controls playsinline preload="metadata" aria-label="Kamal Ahmad performing Dekha Ek Khwab at a wedding">
+                                        <source src="videos/dekha-ek-khwab-wedding.mp4" type="video/mp4" />
+                                        <a href="videos/dekha-ek-khwab-wedding.mp4">Watch the wedding performance</a>
+                                    </video>
+                                    <figcaption>Dekha Ek Khwab · A wedding performance</figcaption>
+                                </figure>
                                 <p><a href="#event-inquiry" class="button primary booking-button">CHECK AVAILABILITY &amp; GET A QUOTE</a></p>
 							</article>
 
@@ -249,6 +256,9 @@
                     document.getElementById('featured-title').focus({ preventScroll: true });
                 });
                 window.addEventListener('hashchange', function () {
+                    if (location.hash !== '#live-music') {
+                        document.querySelectorAll('.wedding-performance video').forEach(function (video) { video.pause(); });
+                    }
                     document.querySelectorAll('.video-container iframe').forEach(function (video) {
                         var onHome = video.closest('#header');
                         if ((onHome && location.hash && location.hash !== '#') || (!onHome && location.hash !== '#media')) {
